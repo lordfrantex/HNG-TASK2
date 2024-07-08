@@ -1,0 +1,78 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+
+.card{
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid #EBEBEB;
+    display: grid;
+    grid-gap: 12px;
+
+    .price, .floating{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-img{
+        justify-self: center;
+        margin-top: -80px;
+    }
+    .floating img{
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        &.active{
+            margin-left: 4px;
+            border: 1px solid #333333;
+            
+        }
+    }
+
+    .title{
+        font-weight: 800;
+        color: #131D15;
+        font-size: 16px;
+        line-height: 21.6px;
+    }
+
+    .review{
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        p:nth-child(1){
+            svg{
+                color: $primary-color;
+            }
+        }
+        p:nth-child(2){
+           font-size: 12px;
+           font-weight: 800;
+        }
+    }
+
+    .price{
+        p:nth-child(1){
+            font-size: 14px;
+            line-height: 16.2px;
+            font-weight: 500;
+            color: #333333;
+         }
+        p:nth-child(2){
+            font-size: 20px;
+            line-height: 27px;
+            font-weight: 500;
+            color: #131D15;
+         }
+        
+             a{
+                 padding: 14px 18px;
+            background-color: #333333;
+            color: white;
+            outline: transparent;
+            font-weight: 600;
+            border-radius: 100px;
+            }
+
+    }
+
+}

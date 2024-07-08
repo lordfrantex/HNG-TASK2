@@ -1,0 +1,53 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+
+*,*::after,*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,li{
+  list-style-type: none;
+}
+
+
+
+.summer-sale{
+  background-color: $primary-color;
+  padding: 18px;
+  text-align: center;
+  color: #333333;
+      
+  }
+
+.container{
+  max-width: 1240px;
+  margin: auto;
+  padding: 12px;
+}
+
+
+
+
+
+// Code to implement datk or light theme
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }
+

@@ -1,0 +1,77 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+
+
+
+
+.best-selling{
+    max-width:700px ;
+    margin: 120px auto;
+
+    @media (max-width:500px) {
+        margin-top: 40px;
+        
+    }
+    div{
+
+        display: flex;
+        justify-content: space-between;
+        margin-top: 36px;
+
+        button{
+            padding: 16px 24px;
+            border-radius: 100px;
+            border: 1px solid #202020;
+            color: #202020;
+            background-color: white;
+            font-weight: 500;
+            font-size: 20px;
+            cursor: pointer;
+            outline: transparent;
+
+            @media (max-width:600px) {
+                &{
+                    font-size: 14px;
+                    padding: 10px 5px;
+                }
+                
+            }
+
+            &.active{
+            background-color: $dark-color;
+            color: white;
+
+
+            }
+    }
+
+    }
+
+  
+
+    h2{
+        font-weight: 700;
+        text-align: center;
+        font-size: 48px;
+        color: black;
+    }
+}
+
+.chair-wrapper{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+    
+    @media (max-width:800px) {
+        &{
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+        }
+        
+    }
+}
+
+
+.explore{
+    text-align: center;
+    margin-block: 50px;
+}

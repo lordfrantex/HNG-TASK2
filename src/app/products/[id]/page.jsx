@@ -1,0 +1,201 @@
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import './page.scss'
+import { FaArrowLeft, FaGreaterThan, FaStar } from 'react-icons/fa'
+import Card from '@/ui/card/Card'
+
+const page = ({ params }) => {
+    const [similarProduct, setSimilarProduct] = useState([
+        {
+            id: 1,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 2,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 3,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+    ])
+
+    const mapSimilarProducts = similarProduct.map(prod => {
+        return <Card chair={prod} />
+    })
+    const { id } = params
+    return (
+        <section>
+            <div className="container">
+                <div className='navigation'>
+                    <Link href="/" className="back">
+                        <span><FaArrowLeft fontSize={12} /></span>
+                        <span>Back</span>
+                    </Link>
+                    <ul className="">
+                        <li><span><Link href='#'>Catalogue</Link></span> <span><FaGreaterThan fontSize={12} /><FaGreaterThan fontSize={12} /></span></li>
+                        <li><Link href='#'>Mide Chair</Link> <span><FaGreaterThan fontSize={12} /><FaGreaterThan fontSize={12} /></span></li>
+                        <li><Link href='#'>Red Oval Mide Chair</Link></li>
+
+                    </ul>
+                </div>
+
+                <div className="single-product-body">
+                    <div className="main-img">
+                        <Image src='/img/image 9.png' width={466} height={466} alt='' />
+                    </div>
+
+                    <div className="main-content">
+                        <span className='title'>Mide Chair</span>
+                        <div className="">
+                            <p>Red Oval Mide Chair</p>
+
+
+                            <div className="review">
+
+                                <p><FaStar />  4.5k <span>15k+ Reviews</span></p>
+                                <p>The Red Oval Mide Chair is a stunning blend of contemporary design and exceptional comfort. Its bold color and unique oval shape make it a standout piece in any room, offering both visual appeal and practical seating.</p>
+                                <div className="price">
+                                    <p>$260.00</p>
+                                    <button><Link href="#">Add to Cart</Link></button>
+                                </div>
+                                <hr />
+                                <div className="colors">
+                                    <div>
+                                        <p>Colors</p>
+                                        <p>Red</p>
+
+                                    </div>
+                                    <div className="">
+                                        <Image src='/img/image 15.png' alt='' width={70} height={70}></Image>
+                                        <Image src='/img/image 15-1.png' alt='' width={70} height={70}></Image>
+                                        <Image src='/img/image 15-2.png' alt='' width={70} height={70}></Image>
+                                    </div>
+                                </div>
+                                <hr />
+                                {/* <div className="product-details">
+                                    <div className="nav">
+                                        <Link href="#" className='active'>Product Details</Link>
+                                        <Link href="#">Packaging Details</Link>
+                                        <Link href="#">Shipping Details</Link>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Make a bold statement with the Red Oval Mide Chair, where contemporary design meets comfort, offering a stylish and functional addition to any room.
+                                        </p>
+                                    </div>
+                                </div> */}
+                                <div className="product-desc">
+                                    <div className="size">
+                                        <p><img src="/img/ruler.png" alt="" />Size</p>
+                                        <li>Height <span>28 Inches</span></li>
+                                        <li>Width <span>24 Inches</span></li>
+
+                                    </div>
+                                    <div className="make">
+                                        <p><img src="/img/Vector.png" alt="" />Make</p>
+                                        <li>Seat <span>Upholstery</span></li>
+                                        <li>Legs <span>Sturdy Iron</span></li>
+
+                                    </div>
+                                </div>
+                                <hr />
+                                <div className="reviews">
+                                    <div className="">
+                                        <p>Reviews & Ratings</p>
+                                        <p>See all Reviews</p>
+                                    </div>
+                                    <div className="comments">
+                                        <div className="">
+                                            <div className='heading'>
+                                                <div className="">
+                                                    <img src="/img/Ellipse 1.png" alt="" />
+                                                    <div className="">
+                                                        <p>Fae_Vour</p>
+                                                        <p>10 June 2024</p>
+                                                    </div>
+                                                </div>
+                                                <div className="">
+                                                    <FaStar />
+                                                    <span>4.5k </span>
+                                                </div>
+
+                                            </div>
+                                            <div className='writeup'>
+                                                <p>
+                                                    "I absolutely love the Red Oval Mide Chair! It has completely transformed the look of my living room. The vibrant red color adds such a lively touch, and the unique oval shape makes it a real conversation piece. It's not just beautiful to look at – it's incredibly comfortable too. The padding is just right, and the fabric feels very high-quality. The iron legs are sturdy and give it a solid feel. I’ve received so many compliments from friends and family. Definitely worth the purchase!"
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div className="comments">
+                                        <div className="">
+                                            <div className='heading'>
+                                                <div className="">
+                                                    <img src="/img/Ellipse 2.png" alt="" />
+                                                    <div className="">
+                                                        <p>Kefe</p>
+                                                        <p>24 June 2024</p>
+                                                    </div>
+                                                </div>
+                                                <div className="">
+                                                    <FaStar />
+                                                    <span>4.5k </span>
+                                                </div>
+
+                                            </div>
+                                            <div className='writeup'>
+                                                <p>
+                                                    "I absolutely love the Red Oval Mide Chair! It has completely transformed the look of my living room. The vibrant red color adds such a lively touch, and the unique oval shape makes it a real conversation piece. It's not just beautiful to look at – it's incredibly comfortable too. The padding is just right, and the fabric feels very high-quality. The iron legs are sturdy and give it a solid feel. I’ve received so many compliments from friends and family. Definitely worth the purchase!"
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="similar-product-container">
+                    <div className="title">
+                        <h2> Similar Products</h2>
+                    </div>
+                    <div className="similar-product">
+
+                        {mapSimilarProducts}
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    )
+}
+
+export default page

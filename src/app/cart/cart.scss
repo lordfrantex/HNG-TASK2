@@ -1,0 +1,270 @@
+.cart-parent{
+    background-color: #F6F6F5;
+
+
+ 
+
+}
+
+.cart-wrapper{
+    display: grid;
+    margin: 85px 0 76px 0;
+    // border: 3px solid blue;
+    align-items: flex-start;
+    gap: 30px;
+    grid-template-columns: 784px 1fr;
+    @media (max-width:1100px) {
+        
+        grid-template-columns:1fr;
+        .order{
+            background-color: #131D15;
+          
+        }
+    }
+}
+
+.cart{
+    background-color: white;
+    border-radius: 15px;
+    padding: 54px;
+
+
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 81px;
+        align-items: center;
+
+
+        h3{
+            font-weight: 700;
+            font-size: 30px;
+            padding: 15px;
+
+
+            @media (max-width:700px) {
+                font-size: 16px;
+                
+            }
+        }
+        a{
+            font-weight: 500;
+            display: flex;
+            padding: 15px;
+            align-items: center;
+            gap: 12px;
+            @media (max-width:700px) {
+                font-size: 12px;
+                
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        padding: 10px;
+        
+    }
+    // border: 1px solid red;
+    
+    .cart-card{
+        border-bottom: 1px solid #DCDCDC;
+        display: flex;
+        padding-block: 30px;
+        margin-top: 30px;
+        gap: 10px;
+        align-items: center;
+
+        .img{
+            img{
+                width: 60px;
+            }
+        }
+
+
+        &>div:nth-child(1){
+
+            
+        }
+        &>div:nth-child(2){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // background-color: blue;
+            flex: 1;
+
+            div{
+               display: grid;
+                gap: 16px;
+            }
+            div:nth-child(1){
+                p:nth-child(3){
+                    font-weight: 700;
+                    @media (min-width:700px) {
+                        display: none;
+                        
+                    }
+
+                }
+            }
+
+
+            &>div:nth-child(1){
+
+                &>p:nth-child(1){
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+                &>p:nth-child(2){
+                    font-weight: 700;
+                   display: flex;
+                   align-items: center;
+                   gap: 12px;
+
+                margin-top: -10px;
+                   color: #131D15;
+                   span{
+                    display: flex;
+                    gap: 12px;
+
+                    svg{
+                        display: none;
+                        @media (min-width:700px) {
+                            
+                            border: 4px solid #DCDCDC;
+                            cursor: pointer;
+                            font-size: 30px;
+                            border-radius: 50%;
+                            display: inline;
+                        }
+                    }
+                   }
+                }
+
+            }
+            &>div:nth-child(2){
+                p:nth-child(1){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 500;
+
+                    button{
+                        width: 25px;
+                        height: 25px;
+                        background-color: white;
+                        font-size: 18px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        border: 1.5px solid #131D15;
+                    }
+
+                 
+                }
+              
+                p:nth-child(3){
+
+                    gap: 6px;
+                    display: flex;
+                    align-items: center;
+                    // margin-top: 20px;
+                    color: #EF4444;
+
+                    // background-color: blue;
+                    cursor: pointer;
+
+                }
+                p:nth-child(2){
+                    display: none;
+                    @media (max-width:700px) { 
+                        display: flex;
+                        // margin-top: 10px;
+                        gap: 12px;
+                    svg{   
+                        border: 4px solid #DCDCDC;
+                        cursor: pointer;
+                        font-size: 25px;
+                        border-radius: 50%;
+                        display: inline;
+                        cursor: pointer;
+                    }
+                }
+
+                }
+
+
+            }
+            &>div:nth-child(2){
+                display: grid;
+                gap: 16px;
+            }
+
+        }
+
+        .price{
+            // align-self: flex-start;
+
+            @media (max-width:800px) {
+                display: none !important;
+            }
+         p{
+            font-weight: 700;
+            font-size: 20px;
+            color: #131D15;
+        }
+    }
+}
+}
+
+.order{
+   &>div{
+       background-color: white;
+       padding: 28px 28px 48px 28px ;
+       border-radius: 15px;
+       display: grid;
+       gap: 50px; 
+       @media (max-width:1100px) {
+           background-color: #131D15;
+           color: white;
+
+         
+       }
+
+
+       &>div{
+        p{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+
+            span{
+                font-weight: 700;
+            }
+        }
+        hr{
+            margin-bottom: 40px;
+        }
+       }
+
+       a{
+        background-color: #202020;
+        color: white;
+        display: block;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 55px;
+        padding: 15px;
+        border-radius: 100px;
+
+        @media (max-width:1100px) {
+
+            color: black;
+            background-color: white;
+        }
+
+       }
+    } 
+
+
+}

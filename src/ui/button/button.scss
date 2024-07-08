@@ -1,0 +1,13 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+button.modular-btn{
+    padding: 16px 49px;
+    border-radius: 100px;
+    background-color: $primary-color;
+    color: #131D15;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    outline: transparent;
+    border: none;
+}
