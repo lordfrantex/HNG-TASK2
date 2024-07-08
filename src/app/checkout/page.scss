@@ -1,0 +1,230 @@
+.checkout-wrapper{
+    background-color: #F6F6F5;
+    .checkout{
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        @media (min-width:1050px) {
+            grid-template-columns: 700px 1fr;
+            gap: 30px;
+            
+        }
+        .left{
+            background-color: white;
+            padding: 49px;
+
+
+            @media (max-width:500px) {
+                padding: 10px;
+                
+            }
+
+            border-radius: 20px;
+            .back{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 56px;
+
+            }
+            .heading{
+                margin-bottom: 56px;
+                h3{
+                    font-weight: 700;
+                    margin-bottom: 17px;
+                    font-size: 20px;
+                }
+                p{
+                    color: #A1A1A1;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            .contact-info{
+                &>div{
+                    display: grid;
+                    padding: 40px;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 56px;
+
+                    @media (max-width:700px) {
+                        gap: 10px;
+                        padding: 0;
+                        
+                    }
+                    @media (max-width:700px) {
+                        grid-template-columns: 1fr;
+                        
+                    }
+
+                    .form-group{
+                        display: flex;
+                    border: 1px solid white;
+
+                        align-items: center;
+                        gap: 20px;
+                        &>span{
+                            position: relative;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                height: 30px;
+                                width: 2px;
+                                background-color: #DCDCDC;
+                                top: 0;
+                                right: -10px;
+                          
+                            }
+                        }
+                        &>div{
+                          
+                       
+                            flex: 1;
+                            display: flex;
+                            padding: 12px;
+
+                            flex-direction: column;
+                            gap: 10px;
+
+                            span{
+                                font-size: 12px;
+                            }
+
+                            input{
+                                outline: 0;
+                                border: 0;
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .delivery,.payment{
+
+                // here
+                // display: none;
+                div{
+                    margin-top: 28px;
+                display: flex;
+                flex-wrap: wrap;
+
+                @media (max-width:400px) {
+                    flex-direction: column;
+                    
+                }
+                gap: 25px;
+
+
+                button{
+                    padding: 14px 32px;
+                    border-radius: 12px;
+                    border: 1px solid #131D15;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    background-color: white;
+                    gap: 12;
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            }
+
+            .payment{
+                margin-top: 35px;
+                button{
+                    span:nth-child(2){
+                        svg{
+                            width: 50px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right{
+            background-color: white;
+            display: none;
+            border-radius: 30px;
+
+            &>div{
+                padding: 25px 10px;
+
+                h3{
+                    margin-bottom: 50px;
+                }
+
+                .form-group{
+                    display: grid;
+                    margin-bottom: 62px;
+                    gap: 25px;
+
+
+
+                    .card-number{
+                        p{
+                            font-weight: 700;
+                        }
+                        input{
+                            border: 1px solid #DCDCDC;
+                            padding: 10px;
+                            border-radius: 6px;
+                            display: block;
+                            width: 100%;
+                            margin-top: 10px;
+
+                        }
+                    }
+                }
+
+                .form-row{
+                    display: flex;
+                    gap: 20px;
+
+                    justify-content: space-between;
+                    // background-color: red;
+
+                    p{
+                        font-weight: 700;
+                    }
+                    &>div{
+                        flex: 1;
+
+
+                        input{
+                            border: 1px solid #DCDCDC;
+                            padding: 10px;
+                            border-radius: 6px;
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                .btn{
+                    button{
+                        display: block;
+                        width: 100%;
+                        padding: 16px 24px;
+                        border-radius: 50px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        background-color: #202020;
+                        color: white;
+
+                    }
+                }
+            }
+        }
+
+
+    }
+}

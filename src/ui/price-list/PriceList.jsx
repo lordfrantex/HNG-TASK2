@@ -25,7 +25,7 @@ const PriceList = () => {
             title: 'Snow Latte Mide Chair',
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-1.png',
             img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
             img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
 
@@ -35,7 +35,7 @@ const PriceList = () => {
             title: 'Snow Latte Mide Chair',
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-2.png',
             img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
             img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
 
@@ -45,7 +45,7 @@ const PriceList = () => {
             title: 'Snow Latte Mide Chair',
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            mainImg: '/img/image 10-1.png',
             img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
             img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
 
@@ -55,7 +55,7 @@ const PriceList = () => {
             title: 'Snow Latte Mide Chair',
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-4.png',
             img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
             img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
 
@@ -65,7 +65,67 @@ const PriceList = () => {
             title: 'Snow Latte Mide Chair',
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-5.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 7,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-6.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 8,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-7.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 9,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-8.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 10,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-9.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 11,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-10.png',
+            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+
+        },
+        {
+            id: 12,
+            title: 'Snow Latte Mide Chair',
+            price: 100,
+            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-11.png',
             img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
             img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
 

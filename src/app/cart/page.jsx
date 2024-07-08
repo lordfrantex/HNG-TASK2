@@ -94,7 +94,7 @@ const page = () => {
                                 <p>Shipping Fees<span>$300.00</span></p>
                                 <hr />
                                 <p>Total<span>$1,4200.00</span></p>
-                                <Link href="#">Proceed To Checkout</Link>
+                                <Link href="/checkout">Proceed To Checkout</Link>
                             </div>
                         </div>
                     </div>
