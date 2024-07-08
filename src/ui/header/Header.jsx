@@ -1,23 +1,26 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import './header.scss'
 import Button from '../button/Button'
 import { FaBars, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
 import Link from 'next/link'
 const Header = () => {
+
+    const [toggle, setToggle] = useState(false)
     return (
         <header>
 
             <div className="container">
                 <nav>
-                    <ul>
-                        <li><a href="#">Mide Chair</a></li>
-                        <li><a href="#">Seun Chair</a></li>
-                        <li><a href="#">Fae Chair</a></li>
-                        <li><a href="#">Zoe Chair</a></li>
-                        <li><a href="#">Discounted Products</a></li>
+                    <ul className={toggle && 'responsive'}>
+                        <li><a href="#" onClick={() => setToggle(prev => !prev)}>Mide Chair</a></li>
+                        <li><a href="#" onClick={() => setToggle(prev => !prev)}>Seun Chair</a></li>
+                        <li><a href="#" onClick={() => setToggle(prev => !prev)}>Fae Chair</a></li>
+                        <li><a href="#" onClick={() => setToggle(prev => !prev)}>Zoe Chair</a></li>
+                        <li><a href="#" onClick={() => setToggle(prev => !prev)}>Discounted Products</a></li>
                     </ul>
                     <div className="logo">
-                        <span><FaBars /></span>
+                        <span onClick={() => setToggle(prev => !prev)}><FaBars /></span>
                         <h2>VEECKER</h2>
                     </div>
                     <div className="right-section">
