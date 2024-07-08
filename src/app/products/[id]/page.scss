@@ -102,6 +102,13 @@ $dark-color: #202020;
                 color: white;
                  border: none;
                  border-radius: 100px;
+
+                 transition: .3s ease-in-out;
+                 &:hover{
+                         background-color: $primary-color;
+                 
+                     }
+                 
             }
         }
 

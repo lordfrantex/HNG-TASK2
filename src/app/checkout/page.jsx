@@ -108,7 +108,7 @@ const page = () => {
                                         </div>
                                     </div>
                                     <div className="btn">
-                                        <button>Proceed To Payment</button>
+                                        <Link href='/success'><button>Proceed To Payment</button></Link>
                                     </div>
 
                                 </div>

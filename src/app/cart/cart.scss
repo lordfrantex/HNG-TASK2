@@ -1,3 +1,6 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+
 .cart-parent{
     background-color: #F6F6F5;
 
@@ -156,6 +159,8 @@
                         border-radius: 8px;
                         cursor: pointer;
                         border: 1.5px solid #131D15;
+                       
+  
                     }
 
                  
@@ -256,6 +261,12 @@
         margin-top: 55px;
         padding: 15px;
         border-radius: 100px;
+        transition: .3s ease-in-out;
+
+        &:hover{
+            background-color: $primary-color;
+            color: black;
+        }
 
         @media (max-width:1100px) {
 

@@ -1,3 +1,7 @@
+$primary-color: #FFD700;
+$dark-color: #202020;
+
+
 .checkout-wrapper{
     background-color: #F6F6F5;
     .checkout{
@@ -152,7 +156,6 @@
 
         .right{
             background-color: white;
-            display: none;
             border-radius: 30px;
 
             &>div{
@@ -219,6 +222,12 @@
                         cursor: pointer;
                         background-color: #202020;
                         color: white;
+                        transition: .3s ease-in-out;
+                        &:hover{
+                                background-color: $primary-color;
+                        
+                            }
+                        
 
                     }
                 }

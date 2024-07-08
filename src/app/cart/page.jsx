@@ -39,7 +39,7 @@ const page = () => {
                             </div>
                             <div className="cart-card">
                                 <div className="img">
-                                    <img src="/img/image 10.png" alt="" />
+                                    <img src="/img/image 10-1.png" alt="" />
                                 </div>
                                 <div className="">
                                     <div className="">
@@ -61,7 +61,7 @@ const page = () => {
                             </div>
                             <div className="cart-card">
                                 <div className="img">
-                                    <img src="/img/image 10.png" alt="" />
+                                    <img src="/img/image 10-2.png" alt="" />
                                 </div>
                                 <div className="">
                                     <div className="">

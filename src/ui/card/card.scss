@@ -71,6 +71,15 @@ $dark-color: #202020;
             outline: transparent;
             font-weight: 600;
             border-radius: 100px;
+            // display: none;
+            // background-color: red;
+            
+            transition: .3s ease-in-out;
+            &:hover{
+                    background-color: $primary-color;
+                    color: black;
+            
+                }
             }
 
     }

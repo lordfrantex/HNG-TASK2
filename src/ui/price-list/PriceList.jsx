@@ -26,8 +26,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-1.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-1.png',
+            img2: '/img/Rectangle 3-1.png',
 
         },
         {
@@ -36,8 +36,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-2.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-2.png',
+            img2: '/img/Rectangle 3-2.png',
 
         },
         {
@@ -46,8 +46,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/image 10-1.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-3.png',
+            img2: '/img/Rectangle 3-3.png',
 
         },
         {
@@ -56,8 +56,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-4.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-4.png',
+            img2: '/img/Rectangle 3-4.png',
 
         },
         {
@@ -66,8 +66,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-5.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-5.png',
+            img2: '/img/Rectangle 3-5.png',
 
         },
         {
@@ -76,8 +76,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-6.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-6.png',
+            img2: '/img/Rectangle 3-6.png',
 
         },
         {
@@ -86,8 +86,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-7.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-7.png',
+            img2: '/img/Rectangle 3-7.png',
 
         },
         {
@@ -96,8 +96,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-8.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-8.png',
+            img2: '/img/Rectangle 3-8.png',
 
         },
         {
@@ -106,8 +106,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-9.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-9.png',
+            img2: '/img/Rectangle 3-9.png',
 
         },
         {
@@ -116,8 +116,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-10.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-10.png',
+            img2: '/img/Rectangle 3-10.png',
 
         },
         {
@@ -126,8 +126,8 @@ const PriceList = () => {
             price: 100,
             desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
             mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-11.png',
-            img1: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
-            img2: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1.png',
+            img1: '/img/Rectangle 3-11.png',
+            img2: '/img/Rectangle 3-11.png',
 
         },
     ])
