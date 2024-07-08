@@ -43,7 +43,8 @@ const page = () => {
                                 </div>
                                 <div className="">
                                     <div className="">
-                                        <p>Red Oval Mide Chair</p>
+                                        <p>Hector Velvet Mide Chair</p>
+
                                         <p>Select Color: <span><FaCircle /><FaCircle /><FaCircle /></span></p>
                                         <p>$520.00</p>
 
@@ -65,7 +66,7 @@ const page = () => {
                                 </div>
                                 <div className="">
                                     <div className="">
-                                        <p>Red Oval Mide Chair</p>
+                                        <p>Ochre arm Mide Chair</p>
                                         <p>Select Color: <span><FaCircle /><FaCircle /><FaCircle /></span></p>
                                         <p>$520.00</p>
 

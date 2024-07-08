@@ -129,6 +129,18 @@ $dark-color: #202020;
                     display: flex;
                     gap: 12px;
 
+                    &:nth-child(1){
+                        svg:nth-child(1){
+                            color: #E7252F;
+                        }
+                        svg:nth-child(2){
+                            color: #5C2155;
+                        }
+                        svg:nth-child(3){
+                            color: #1B4F7D;
+                        }
+                    }
+
                     svg{
                         display: none;
                         @media (min-width:700px) {
