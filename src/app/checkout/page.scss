@@ -158,6 +158,24 @@ $dark-color: #202020;
             background-color: white;
             border-radius: 30px;
 
+            @media (max-width:1050px) {
+                background-color: #202020;
+                color: white;
+                border-radius: 0;
+                input{
+                    background-color: transparent;
+                }
+
+               .btn{
+
+                button{
+                    background-color: white !important;
+                    color: black !important;
+                }
+               }
+                
+            }
+
             &>div{
                 padding: 25px 10px;
 

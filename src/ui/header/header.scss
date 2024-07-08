@@ -25,6 +25,7 @@ header{
                top: 0;
                height: 100%;
                width: 0;
+               overflow: hidden;
                background-color: $dark-color;
                flex-direction: column;
                gap: 50px;
