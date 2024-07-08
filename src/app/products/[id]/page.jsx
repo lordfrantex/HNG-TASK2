@@ -6,7 +6,7 @@ import './page.scss'
 import { FaArrowLeft, FaGreaterThan, FaStar } from 'react-icons/fa'
 import Card from '@/ui/card/Card'
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
     const [similarProduct, setSimilarProduct] = useState([
         {
             id: 1,
@@ -41,7 +41,7 @@ const page = ({ params }) => {
     ])
 
     const mapSimilarProducts = similarProduct.map(prod => {
-        return <Card chair={prod} />
+        return <Card key={prod.id} chair={prod} />
     })
     const { id } = params
     return (
@@ -143,7 +143,7 @@ const page = ({ params }) => {
                                             </div>
                                             <div className='writeup'>
                                                 <p>
-                                                    "I absolutely love the Red Oval Mide Chair! It has completely transformed the look of my living room. The vibrant red color adds such a lively touch, and the unique oval shape makes it a real conversation piece. It's not just beautiful to look at – it's incredibly comfortable too. The padding is just right, and the fabric feels very high-quality. The iron legs are sturdy and give it a solid feel. I’ve received so many compliments from friends and family. Definitely worth the purchase!"
+                                                    &quot; I absolutely love the Red Oval Mide Chair! It has completely transformed the look of my living room. The vibrant red color adds such a lively touch, and the unique oval shape makes it a real conversation piece. It&apos;s not just beautiful to look at – it&apos;s incredibly comfortable too. The padding is just right, and the fabric feels very high-quality. The iron legs are sturdy and give it a solid feel. Ive received so many compliments from friends and family. Definitely worth the purchase!&quot;
                                                 </p>
                                             </div>
 
@@ -198,4 +198,4 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default Page

@@ -74,7 +74,7 @@ const PriceList = () => {
 
     const mapChair = chairList.map((chair, index) => {
         return (
-            <Card chair={chair} index={index} />
+            <Card key={chair.id} chair={chair} index={index} />
         )
 
     })
