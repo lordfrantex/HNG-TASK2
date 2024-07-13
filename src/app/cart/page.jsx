@@ -28,7 +28,7 @@ const Page = () => {
     const mapCartItems = cartItems && cartItems.length > 0 ? (
         cartItems.map(item => <CartCard key={item.id} item={item} dispatch={dispatch} />)
     ) : (
-        <p>No item in cart</p>
+        <p key='yours'>No item in cart</p>
     );
 
     return (
