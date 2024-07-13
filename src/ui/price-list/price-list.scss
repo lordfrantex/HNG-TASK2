@@ -75,3 +75,27 @@ $dark-color: #202020;
     text-align: center;
     margin-block: 50px;
 }
+
+.pagination{
+    // background-color: red;
+    margin-bottom: 40px;
+    button{
+        padding: 10px 15px;
+        border-radius: 100px;
+        color: white;
+        background-color: $dark-color;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+    span{
+        height: 30px;
+        border-radius: 50%;
+        width: 30px;
+        display: inline-block;
+        line-height: 30px;
+        margin-inline: 5px;
+        border: 1px solid $dark-color;
+     
+    }
+}

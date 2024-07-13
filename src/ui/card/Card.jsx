@@ -5,22 +5,25 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Card = ({ chair, index }) => {
+    const mainPhoto = chair.photos[0].url
+    const otherPhoto = chair.photos[1].url
+    const price = chair.current_price[0].GBP[0]
     return (
         <div key={chair.id} className='card'>
 
 
             <div className="floating">
                 <div className="">
-
-                    <Image src={chair.img2} alt='' width={47} height={47} />
-                    <Image src={chair.img1} alt='' className='active' width={47} height={47} />
+                    <Image src={`https://api.timbu.cloud/images/${mainPhoto}`} alt='' width={47} height={47} />
+                    <Image src={`https://api.timbu.cloud/images/${mainPhoto}`} alt='' width={47} height={47} />
                 </div>
                 <span><FaHeart /></span>
             </div>
-            <Image src={chair.mainImg} alt='' className='main-img' width={199} height={186} />
+            <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} className='main-img' alt='' width={199} height={186} />
+
             <hr />
 
-            <p className='title'>{chair.title}</p>
+            <p className='title'>{chair.name}</p>
             <div className='review'>
                 <p>
                     <span><FaStar /></span>
@@ -32,11 +35,11 @@ const Card = ({ chair, index }) => {
                 <p>10k+ Reviews</p>
 
             </div>
-            <p className='desc'>{chair.desc}</p>
+            <p className='desc'>{chair.description}</p>
             <div className="price">
                 <div className="">
                     <p>Price</p>
-                    <p>${chair.price}</p>
+                    <p>${price}</p>
                 </div>
 
                 <Link href={`/products/${chair.id}`}>View Details</Link>

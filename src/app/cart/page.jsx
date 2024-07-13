@@ -1,9 +1,30 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import './cart.scss'
 import Link from 'next/link'
 import { FaArrowLeft, FaCircle, FaTrash } from 'react-icons/fa'
+import CartCard from './CartCard'
+import { useCart } from '@/context/CartContext'
 
-const page = () => {
+
+const Page = () => {
+    const { state, dispatch } = useCart()
+    const { cartItems } = state
+
+    const findSum = cartItems.reduce((total, current) => {
+        return total + (current.current_price * current.quantityOrdered)
+    }, 0);
+    useEffect(() => {
+        dispatch({ type: "UPDATE_TOTAL_CART", payload: findSum })
+    }, [findSum])
+
+    const shippingFee = 300
+
+    const mapCartItems = cartItems && cartItems.length > 0 ?
+        cartItems.map(item => <CartCard item={item} dispatch={dispatch} />)
+        :
+        <p>No item in cart</p>
+
     return (
         <section className='cart-parent'>
             <div className="container">
@@ -14,74 +35,9 @@ const page = () => {
                             <Link href="/"> <FaArrowLeft /> <span>Continue Shopping</span></Link>
                         </div>
 
+
                         <div className="main-cart-wrapper">
-                            <div className="cart-card">
-                                <div className="img">
-                                    <img src="/img/image 10.png" alt="" />
-                                </div>
-                                <div className="">
-                                    <div className="">
-                                        <p>Red Oval Mide Chair</p>
-                                        <p>Select Color: <span><FaCircle /><FaCircle /><FaCircle /></span></p>
-                                        <p>$520.00</p>
-
-                                    </div>
-                                    <div className="">
-                                        <p><button>-</button> <span>2</span> <button>+</button></p>
-                                        <p><FaCircle /><FaCircle /><FaCircle /></p>
-                                        <p><FaTrash /> <span>Remove</span></p>
-
-                                    </div>
-                                    <div className="price">
-                                        <p>$520.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="cart-card">
-                                <div className="img">
-                                    <img src="/img/image 10-1.png" alt="" />
-                                </div>
-                                <div className="">
-                                    <div className="">
-                                        <p>Hector Velvet Mide Chair</p>
-
-                                        <p>Select Color: <span><FaCircle /><FaCircle /><FaCircle /></span></p>
-                                        <p>$520.00</p>
-
-                                    </div>
-                                    <div className="">
-                                        <p><button>-</button> <span>2</span> <button>+</button></p>
-                                        <p><FaCircle /><FaCircle /><FaCircle /></p>
-                                        <p><FaTrash /> <span>Remove</span></p>
-
-                                    </div>
-                                    <div className="price">
-                                        <p>$520.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="cart-card">
-                                <div className="img">
-                                    <img src="/img/image 10-2.png" alt="" />
-                                </div>
-                                <div className="">
-                                    <div className="">
-                                        <p>Ochre arm Mide Chair</p>
-                                        <p>Select Color: <span><FaCircle /><FaCircle /><FaCircle /></span></p>
-                                        <p>$520.00</p>
-
-                                    </div>
-                                    <div className="">
-                                        <p><button>-</button> <span>2</span> <button>+</button></p>
-                                        <p> <FaCircle /><FaCircle /><FaCircle /></p>
-                                        <p><FaTrash /> <span>Remove</span></p>
-
-                                    </div>
-                                    <div className="price">
-                                        <p>$520.00</p>
-                                    </div>
-                                </div>
-                            </div>
+                            {mapCartItems}
                         </div>
 
 
@@ -91,10 +47,10 @@ const page = () => {
                         <div className="">
                             <h3>Order Summary</h3>
                             <div className="">
-                                <p>Subtotal <span>$1,200.00</span></p>
-                                <p>Shipping Fees<span>$300.00</span></p>
+                                <p>Subtotal <span>${state.cartTotal}.00</span></p>
+                                <p>Shipping Fees<span>${shippingFee}.00</span></p>
                                 <hr />
-                                <p>Total<span>$1,4200.00</span></p>
+                                <p>Total<span>${findSum + shippingFee}.00</span></p>
                                 <Link href="/checkout">Proceed To Checkout</Link>
                             </div>
                         </div>
@@ -105,4 +61,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

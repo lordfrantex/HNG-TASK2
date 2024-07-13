@@ -102,7 +102,7 @@ $dark-color: #202020;
             div:nth-child(1){
                 p:nth-child(3){
                     font-weight: 700;
-                    @media (min-width:700px) {
+                    @media (min-width:800px) {
                         display: none;
                         
                     }
@@ -219,6 +219,7 @@ $dark-color: #202020;
 
         .price{
             // align-self: flex-start;
+            // display: block;
 
             @media (max-width:800px) {
                 display: none !important;

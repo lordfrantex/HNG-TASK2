@@ -1,49 +1,74 @@
-'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import './page.scss'
 import { FaArrowLeft, FaGreaterThan, FaStar } from 'react-icons/fa'
 import Card from '@/ui/card/Card'
+import { useCart } from '@/context/CartContext'
+import { AddToCart } from '@/ui/button/Button'
 
-const Page = ({ params }) => {
-    const [similarProduct, setSimilarProduct] = useState([
-        {
-            id: 1,
-            title: 'Snow Latte Mide Chair',
-            price: 100,
-            desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-            mainImg: '/img/image 10-1.png',
-            img1: '/img/Rectangle 2-2.png',
-            img2: '/img/Rectangle 3-3.png',
 
-        },
-        {
-            id: 2,
-            title: 'Hayneedle Mide Chair',
-            price: 100,
-            desc: 'The Hayneedle Mide Chair brings a touch of classic elegance and modern functionality to any space. With its sophisticated design and high-quality craftsmanship, making it perfect addition to your home.',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-7.png',
-            img1: '/img/Rectangle 2-6.png',
-            img2: '/img/Rectangle 2-6.png',
+const fetchSpecific = async (id) => {
+    const URL = `${process.env.ROOT_URL}/products/${id}?currency_code=GBP&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}`
 
-        },
-        {
-            id: 3,
-            title: 'Waffle Mide Chair',
-            price: 100,
-            desc: 'The Waffle Mide Chair combines contemporary design with exceptional comfort, making it an ideal choice for modern interiors. With its unique waffle-patterned, this chair offer style and support.',
-            mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-8.png',
-            img1: '/img/Rectangle 2-7.png',
-            img2: '/img/Rectangle 2-7.png',
+    // const URL = `https://api.timbu.cloud/products/${id}?currency_code=GBP&organization_id=cc3a77b7f6e34fefae2bc0e27575091c&Appid=9X5AX18KTL1C6FF&Apikey=c1f8512ad1ed475c830ce979077212f220240712140831027506`
+    const fetchItem = await fetch(URL)
+    return fetchItem.json()
+}
 
-        },
-    ])
+const Page = async ({ params }) => {
+    // https://api.timbu.cloud/categories/0fd5c1e02ef041deb626fe858159fd71?organization_id=cc3a77b7f6e34fefae2bc0e27575091c&Appid=9X5AX18KTL1C6FF&Apikey=c1f8512ad1ed475c830ce979077212f220240712140831027506
+    // const [similarProduct, setSimilarProduct] = [
 
-    const mapSimilarProducts = similarProduct.map(prod => {
-        return <Card key={prod.id} chair={prod} />
-    })
+
+    //     {
+    //         id: 1,
+    //         title: 'Snow Latte Mide Chair',
+    //         price: 100,
+    //         desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
+    //         mainImg: '/img/image 10-1.png',
+    //         img1: '/img/Rectangle 2-2.png',
+    //         img2: '/img/Rectangle 3-3.png',
+
+    //     },
+    //     {
+    //         id: 2,
+    //         title: 'Hayneedle Mide Chair',
+    //         price: 100,
+    //         desc: 'The Hayneedle Mide Chair brings a touch of classic elegance and modern functionality to any space. With its sophisticated design and high-quality craftsmanship, making it perfect addition to your home.',
+    //         mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-7.png',
+    //         img1: '/img/Rectangle 2-6.png',
+    //         img2: '/img/Rectangle 2-6.png',
+
+    //     },
+    //     {
+    //         id: 3,
+    //         title: 'Waffle Mide Chair',
+    //         price: 100,
+    //         desc: 'The Waffle Mide Chair combines contemporary design with exceptional comfort, making it an ideal choice for modern interiors. With its unique waffle-patterned, this chair offer style and support.',
+    //         mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-8.png',
+    //         img1: '/img/Rectangle 2-7.png',
+    //         img2: '/img/Rectangle 2-7.png',
+
+    //     },
+    // ]
+
+    // const mapSimilarProducts = similarProduct.map(prod => {
+    //     return <Card key={prod.id} chair={prod} />
+    // })
+
+
+
+
+
+
     const { id } = params
+    const item = await fetchSpecific(id)
+
+    const mainPhoto = item.photos[0].url
+    const otherPhoto = item.photos[1].url
+    // const price = item.current_price[0].GBP[0]
+
     return (
         <section>
             <div className="container">
@@ -62,22 +87,23 @@ const Page = ({ params }) => {
 
                 <div className="single-product-body">
                     <div className="main-img">
-                        <Image src='/img/image 9.png' width={466} height={466} alt='' />
+                        <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} alt='' width={466} height={466} />
                     </div>
 
                     <div className="main-content">
-                        <span className='title'>Mide Chair</span>
+                        {item.categories && item.categories.map(itms => <span className='title'>{itms.name}</span>)}
+
                         <div className="">
-                            <p>Red Oval Mide Chair</p>
+                            <p>{item.name}</p>
 
 
                             <div className="review">
 
                                 <p><FaStar />  4.5k <span>15k+ Reviews</span></p>
-                                <p>The Red Oval Mide Chair is a stunning blend of contemporary design and exceptional comfort. Its bold color and unique oval shape make it a standout piece in any room, offering both visual appeal and practical seating.</p>
+                                <p>{item.description}</p>
                                 <div className="price">
-                                    <p>$260.00</p>
-                                    <button><Link href="#">Add to Cart</Link></button>
+                                    <p>${item.current_price}</p>
+                                    <AddToCart item={item} />
                                 </div>
                                 <hr />
                                 <div className="colors">
@@ -87,12 +113,15 @@ const Page = ({ params }) => {
 
                                     </div>
                                     <div className="">
-                                        <Image src='/img/image 15.png' alt='' width={70} height={70}></Image>
-                                        <Image src='/img/image 15-1.png' alt='' width={70} height={70}></Image>
-                                        <Image src='/img/image 15-2.png' alt='' width={70} height={70}></Image>
+                                        <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} alt='' width={70} height={70} />
+                                        <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} alt='' width={70} height={70} />
+                                        <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} alt='' width={70} height={70} />
+
                                     </div>
                                 </div>
                                 <hr />
+
+                                {/* RESPONSIVENESS HANDLE IT HERE */}
                                 {/* <div className="product-details">
                                     <div className="nav">
                                         <Link href="#" className='active'>Product Details</Link>
@@ -189,7 +218,7 @@ const Page = ({ params }) => {
                     </div>
                     <div className="similar-product">
 
-                        {mapSimilarProducts}
+                        {/* {mapSimilarProducts} */}
                     </div>
                 </div>
             </div>

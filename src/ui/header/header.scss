@@ -77,6 +77,27 @@ header{
             justify-content: space-between;
             gap: 26px;
 
+.shopping-link{
+    position: relative;
+    font-size: 20px;
+
+    .cart-total{
+        background-color: $dark-color;
+        padding: 5px;
+        border-radius: 50%;
+        position: absolute;
+        display: grid;
+        place-items: center;
+        width: 20px;
+        text-align: center;
+        height: 20px;
+        top: -15px;
+        font-size: 10px;
+        right: -10px;
+        color: white;
+    }
+            }
+
             a.user{
                 @media (min-width:800px) {    
                     display: none;
