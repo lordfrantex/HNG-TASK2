@@ -16,7 +16,7 @@ const Page = () => {
     }, 0);
     useEffect(() => {
         dispatch({ type: "UPDATE_TOTAL_CART", payload: findSum })
-    }, [findSum])
+    }, [findSum, dispatch])
 
     const shippingFee = 300
 
