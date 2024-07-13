@@ -6,7 +6,7 @@ const CartCard = ({ item, dispatch }) => {
     const otherPhoto = item.photos[1].url
 
     return (
-        <div className="cart-card">
+        <div className="cart-card" key={item.id}>
             <div className="img">
                 <Image src={`https://api.timbu.cloud/images/${otherPhoto}`} alt='' width={120} height={60} />
 

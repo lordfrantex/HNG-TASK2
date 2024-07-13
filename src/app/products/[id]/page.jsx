@@ -91,7 +91,7 @@ const Page = async ({ params }) => {
                     <div className="main-content">
                         {item.categories && item.categories.map(itms => <span key={itms.id} className='title'>{itms.name}</span>)}
 
-                        <div className="">
+                        <div className="" key={item.id}>
                             <p>{item.name}</p>
 
 
