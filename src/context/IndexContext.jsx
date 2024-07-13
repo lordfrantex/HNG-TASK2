@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import CartContext, from './CartContext'
+import CartContext from './CartContext'
 import OtherContext from './OtherContext'
 const IndexContext = ({ children }) => {
 

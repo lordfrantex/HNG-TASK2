@@ -21,7 +21,7 @@ const Page = () => {
     const shippingFee = 300
 
     const mapCartItems = cartItems && cartItems.length > 0 ?
-        cartItems.map(item => <CartCard item={item} dispatch={dispatch} />)
+        cartItems.map(item => <CartCard key={item.id} item={item} dispatch={dispatch} />)
         :
         <p>No item in cart</p>
 

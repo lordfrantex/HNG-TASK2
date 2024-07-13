@@ -8,36 +8,37 @@ const page = async ({ params, searchParams }) => {
 
     const data = await fetchFunc()
 
-    const mapData = data.items.map(item => {
-        const mainPhoto = item.photos[0].url
-        const price = item.current_price[0].GBP[0]
-        return (
-            <div className="" key={item.unique_id}>
-                <p>
+    // const mapData = data.items.map(item => {
+    //     const mainPhoto = item.photos[0].url
+    //     const price = item.current_price[0].GBP[0]
+    //     return (
+    //         <div className="" key={item.unique_id}>
+    //             <p>
 
-                    {item.name}
-                </p>
-                <p>
+    //                 {item.name}
+    //             </p>
+    //             <p>
 
-                    {item.description}
-                </p>
-                <p>
+    //                 {item.description}
+    //             </p>
+    //             <p>
 
-                    {mainPhoto}
-                </p>
-                <p>
+    //                 {mainPhoto}
+    //             </p>
+    //             <p>
 
-                    {price}
-                </p>
-                <hr />
-                {/* <img src={} alt="" /> */}
-            </div>
-        )
-    })
+    //                 {price}
+    //             </p>
+    //             <hr />
+    //             {/* <img src={} alt="" /> */}
+    //         </div>
+    //     )
+    // })
 
     return (
         <div>
-            {mapData}
+            {/* {mapData} */}
+            about page
         </div>
     )
 }

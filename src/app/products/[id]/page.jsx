@@ -11,13 +11,11 @@ import { AddToCart } from '@/ui/button/Button'
 const fetchSpecific = async (id) => {
     const URL = `${process.env.ROOT_URL}/products/${id}?currency_code=GBP&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}`
 
-    // const URL = `https://api.timbu.cloud/products/${id}?currency_code=GBP&organization_id=cc3a77b7f6e34fefae2bc0e27575091c&Appid=9X5AX18KTL1C6FF&Apikey=c1f8512ad1ed475c830ce979077212f220240712140831027506`
     const fetchItem = await fetch(URL)
     return fetchItem.json()
 }
 
 const Page = async ({ params }) => {
-    // https://api.timbu.cloud/categories/0fd5c1e02ef041deb626fe858159fd71?organization_id=cc3a77b7f6e34fefae2bc0e27575091c&Appid=9X5AX18KTL1C6FF&Apikey=c1f8512ad1ed475c830ce979077212f220240712140831027506
     // const [similarProduct, setSimilarProduct] = [
 
 
@@ -91,7 +89,7 @@ const Page = async ({ params }) => {
                     </div>
 
                     <div className="main-content">
-                        {item.categories && item.categories.map(itms => <span className='title'>{itms.name}</span>)}
+                        {item.categories && item.categories.map(itms => <span key={itms.id} className='title'>{itms.name}</span>)}
 
                         <div className="">
                             <p>{item.name}</p>

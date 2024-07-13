@@ -13,7 +13,7 @@ const ActionBtns = ({ chairList, size }) => {
     };
 
     const number = [...Array(Math.ceil(chairList.total / size))].map((_, i) => {
-        return <span className=''>{i + 1}</span>
+        return <span key={i} className=''>{i + 1}</span>
     })
 
     return (
