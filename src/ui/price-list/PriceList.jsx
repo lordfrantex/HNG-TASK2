@@ -12,6 +12,7 @@ import ActionBtns from './ActionBtns'
 const PriceList = ({ chairList, size }) => {
 
     const mapChair = chairList.items.map((chair, index) => {
+
         return (
             <Card key={chair.id} chair={chair} index={index} />
         )

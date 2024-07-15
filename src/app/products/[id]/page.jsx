@@ -89,13 +89,13 @@ const Page = async ({ params }) => {
                     </div>
 
                     <div className="main-content">
-                        {/* {item.categories && item.categories.map(itms => {
+                        {item.categories && item.categories.map(itms => {
                             console.log('ITEMS ARE: ', itms.id);
                             return (
                                 <span key={itms.id} className='title'>{itms.name}</span>
                             )
-                        })} */}
-                        {/* {item.categories && item.categories.map(itms => <span key={itms.id} className='title'>{itms.name}</span>)} */}
+                        })}
+                        {item.categories && item.categories.map(itms => <span key={itms.id} className='title'>{itms.name}</span>)}
 
                         <div className="" key={item.id}>
                             <p>{item.name}</p>
@@ -222,7 +222,7 @@ const Page = async ({ params }) => {
                     </div>
                     <div className="similar-product">
 
-                        {/* {mapSimilarProducts} */}
+                        {mapSimilarProducts}
                     </div>
                 </div>
             </div>
