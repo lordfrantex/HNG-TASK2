@@ -12,15 +12,15 @@ const ActionBtns = ({ chairList, size }) => {
         router.push(url);
     };
 
-    // const number = [...Array(Math.ceil(chairList.total / size))].map((_, i) => {
-    //     return <span key={i} className=''>{i + 1}</span>
-    // })
+    const number = [...Array(Math.ceil(chairList.total / size))].map((_, i) => {
+        return <span key={i} className=''>{i + 1}</span>
+    })
 
     return (
         <div className='pagination'>
 
             <button onClick={() => handlePageChange(chairList.previous_page)}>PREV</button>
-            {/* {number} */}
+            {number}
             <button onClick={() => handlePageChange(chairList.next_page)}>NEXT</button>
         </div>
     )
