@@ -222,7 +222,7 @@ const Page = async ({ params }) => {
                     </div>
                     <div className="similar-product">
 
-                        {mapSimilarProducts}
+                        {/* {mapSimilarProducts} */}
                     </div>
                 </div>
             </div>
