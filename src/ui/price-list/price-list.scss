@@ -78,7 +78,7 @@ $dark-color: #202020;
 
 .pagination{
     // background-color: red;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     button{
         padding: 10px 15px;
         border-radius: 100px;
@@ -87,6 +87,12 @@ $dark-color: #202020;
         cursor: pointer;
         border: none;
         outline: none;
+        transition: .2s ease-in-out;
+
+        &:hover{
+            background-color: $primary-color;
+            color: black;
+        }
     }
     span{
         height: 30px;
@@ -94,8 +100,37 @@ $dark-color: #202020;
         width: 30px;
         display: inline-block;
         line-height: 30px;
+        cursor: pointer;
         margin-inline: 5px;
         border: 1px solid $dark-color;
+        transition: .2s ease-in-out;
+
+        &:hover{
+            background-color: $dark-color;
+            color: white;
+        }
      
     }
 }
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 35px;
+    aspect-ratio: 1;
+    margin: auto;
+    --c: no-repeat linear-gradient(#000 calc(50% - 10px),#0000 0 calc(50% + 10px),#000 0);
+    background: 
+      var(--c) 0%   100%,
+      var(--c) 50%  100%,
+      var(--c) 100% 100%;
+    background-size: 20% calc(200% + 20px);
+    animation:l4 1s infinite linear;
+    margin-bottom: 40px;
+
+  }
+  @keyframes l4 {
+      33%  {background-position: 0% 50%,50% 100%,100% 100%}
+      50%  {background-position: 0%  0%,50%  50%,100% 100%}
+      66%  {background-position: 0%  0%,50%   0%,100%  50%}
+      100% {background-position: 0%  0%,50%   0%,100%   0%}
+  }

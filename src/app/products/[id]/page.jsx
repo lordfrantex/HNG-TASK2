@@ -11,61 +11,39 @@ import { AddToCart } from '@/ui/button/Button'
 const fetchSpecific = async (id) => {
     const URL = `${process.env.ROOT_URL}/products/${id}?currency_code=GBP&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}`
 
-    const fetchItem = await fetch(URL)
+    const fetchItem = await fetch(URL, { cache: 'no-store' })
+    return fetchItem.json()
+}
+
+const fetchAll = async () => {
+    // https://api.timbu.cloud/categories/0fd5c1e02ef041deb626fe858159fd71?organization_id=cc3a77b7f6e34fefae2bc0e27575091c&Appid=9X5AX18KTL1C6FF&Apikey=c1f8512ad1ed475c830ce979077212f220240712140831027506
+    const URL = `${process.env.ROOT_URL}/products?currency_code=GBP&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}`
+
+    const fetchItem = await fetch(URL, { cache: 'no-store' })
     return fetchItem.json()
 }
 
 const Page = async ({ params }) => {
-    // const [similarProduct, setSimilarProduct] = [
-
-
-    //     {
-    //         id: 1,
-    //         title: 'Snow Latte Mide Chair',
-    //         price: 100,
-    //         desc: 'The Mide Chair combines modern design with exceptional comfort, With its sleek lines and ergonomic support, this chair is designed to enhance your seating experience. ',
-    //         mainImg: '/img/image 10-1.png',
-    //         img1: '/img/Rectangle 2-2.png',
-    //         img2: '/img/Rectangle 3-3.png',
-
-    //     },
-    //     {
-    //         id: 2,
-    //         title: 'Hayneedle Mide Chair',
-    //         price: 100,
-    //         desc: 'The Hayneedle Mide Chair brings a touch of classic elegance and modern functionality to any space. With its sophisticated design and high-quality craftsmanship, making it perfect addition to your home.',
-    //         mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-7.png',
-    //         img1: '/img/Rectangle 2-6.png',
-    //         img2: '/img/Rectangle 2-6.png',
-
-    //     },
-    //     {
-    //         id: 3,
-    //         title: 'Waffle Mide Chair',
-    //         price: 100,
-    //         desc: 'The Waffle Mide Chair combines contemporary design with exceptional comfort, making it an ideal choice for modern interiors. With its unique waffle-patterned, this chair offer style and support.',
-    //         mainImg: '/img/PLAY Chair Counter Fabric Height 65 - Re-Wool _ Re-Wool 718 1-8.png',
-    //         img1: '/img/Rectangle 2-7.png',
-    //         img2: '/img/Rectangle 2-7.png',
-
-    //     },
-    // ]
-
-    // const mapSimilarProducts = similarProduct.map(prod => {
-    //     return <Card key={prod.id} chair={prod} />
-    // })
-
-
-
-
-
-
     const { id } = params
+
+
     const item = await fetchSpecific(id)
+
+
+    const fetchSimilar = await fetchAll()
+    const vvv = fetchSimilar?.items?.filter(prod => prod.categories.some(itm => itm.name.includes('bola_chairs')))
+    // const fetchFunc = fetchSimilar.items.filter(prod => prod.categories.some(itms => itms.name.includes(getOthers.categories.map(n => n.name))))
+    const similarProducts = fetchSimilar?.items?.filter(prod => prod.categories.some(cat => cat.name.includes(item?.categories?.map(cate => cate.name))))
+    const mapSimilarProducts = similarProducts.length > 0 && similarProducts.map((sim, i) => {
+        return <Card chair={sim} index={i} key={sim.id} />
+    })
+    console.log('DOIT is not are anser me ooo', item.categories.map(n => n.name));
+    console.log('DOIT is not are anser me ooo similar', similarProducts.map(n => n.name));
+
+
 
     const mainPhoto = item.photos[0].url
     const otherPhoto = item.photos[1].url
-    // const price = item.current_price[0].GBP[0]
 
     return (
         <section>
@@ -90,7 +68,6 @@ const Page = async ({ params }) => {
 
                     <div className="main-content">
                         {item.categories && item.categories.map(itms => {
-                            console.log('ITEMS ARE: ', itms.id);
                             return (
                                 <span key={itms.id} className='title'>{itms.name}</span>
                             )
@@ -221,7 +198,7 @@ const Page = async ({ params }) => {
                     </div>
                     <div className="similar-product">
 
-                        {/* {mapSimilarProducts} */}
+                        {mapSimilarProducts}
                     </div>
                 </div>
             </div>
