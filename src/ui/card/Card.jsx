@@ -8,6 +8,8 @@ const Card = ({ chair, index }) => {
     const mainPhoto = chair.photos[0].url
     const otherPhoto = chair.photos[1].url
     const price = chair.current_price[0].GBP[0]
+
+
     return (
         <div key={chair.id} className='card'>
 

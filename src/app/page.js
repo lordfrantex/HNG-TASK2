@@ -7,7 +7,7 @@ import Header from "@/ui/header/Header";
 
 const fetchChairs = async (page, size) => {
 
-  const URL = `${process.env.ROOT_URL}/products?page=${page}&size=${size}&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}`
+  const URL = `${process.env.ROOT_URL}/products?page=${page}&size=${size}&organization_id=${process.env.ORGANIZATION_ID}&Appid=${process.env.APP_ID}&Apikey=${process.env.API_KEY}&reverse_sort=false`
 
 
   const data = await fetch(URL, {

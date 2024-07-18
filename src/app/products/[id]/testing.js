@@ -28,7 +28,6 @@ const fetchSimilar = {
         }
     ]
 };
-
 const specificProd = {
     items: [
         // {
@@ -46,10 +45,10 @@ const specificProd = {
 }
 
 const currentCategories = specificProd.items.flatMap(prod => {
-    return prod.categories.map(cat => cat.name)
+    return prod.categories.flatMap(cat => cat.name)
 })
+console.log('currentCategories are:', currentCategories);
 
-// console.log(currentCategories);
 
 const checkSim = fetchSimilar.items.filter(itms => itms?.categories?.every(cat => currentCategories.includes(cat.name)))
 

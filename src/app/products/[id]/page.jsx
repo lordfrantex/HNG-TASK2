@@ -37,8 +37,8 @@ const Page = async ({ params }) => {
     const mapSimilarProducts = similarProducts.length > 0 && similarProducts.map((sim, i) => {
         return <Card chair={sim} index={i} key={sim.id} />
     })
-    console.log('DOIT is not are anser me ooo', item.categories.map(n => n.name));
-    console.log('DOIT is not are anser me ooo similar', similarProducts.map(n => n.name));
+    // console.log('DOIT is not are anser me ooo', item.categories.map(n => n.name));
+    // console.log('DOIT is not are anser me ooo similar', similarProducts.map(n => n.name));
 
 
 
